@@ -18,6 +18,19 @@
         "symfony/css-selector": "^6.4"
         
     },
+    "routes":[
+        {
+            "src": "/css|js)/(.*)",
+            "dest": "public/$1/$2"   
+        },
+        {
+            "src":"/img/(.*)",
+            "dest": "public/img"
+        },
+        {"src": "/(.*)", "dest":"/api/index.php"}
+        
+    ],
+
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
